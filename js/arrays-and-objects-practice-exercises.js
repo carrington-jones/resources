@@ -3,20 +3,6 @@
 //1.)
 // Write a function, filterNumbers() that takes in an array of mixed data types and returns an array of only the numbers type in ascencding order.
 
-
-
-// function filterNumber (array) {
-//     var arr = array
-//     var numberArray = []
-//     for( var i = 0; i < arr.length; i++) {
-//         if( arr[i] === 5){
-//             numberArray.push(arr[i]);
-//         }
-//     }
-// }
-// console.log(filterNumber(["fred", true, 5, 3]));
-
-
 function filterNumber (array) {
     var filtered = array.filter(value => typeof value === "number");
     filtered.sort((a, b) => a - b);
@@ -51,3 +37,83 @@ function getOlder(array){
     }); return dogs
 }
 console.log(getOlder(dogs));
+
+// 3.)
+// Write a function, washCars() that takes in a array of car objects and sets the boolean properties of isDirty to false.
+
+var cars =[
+    {
+        make: "Volvo",
+        color: "red",
+        year: 1996,
+        isDirty: true
+    },
+    {
+        make: "Toyota",
+        color: "black",
+        year: 2004,
+        isDirty: false
+    },
+    {
+        make: "Ford",
+        color: "white",
+        year: 2007,
+        isDirty: true
+    }
+]
+
+function washCars(array){
+    cars.forEach(function(car) {
+        car.isDirty = false
+        }); return cars
+}
+console.log(washCars(cars));
+
+// 4.)
+// Write a function, adminList() that takes in an array of user objects and returns a count of all admins based on the isAdmin property. Refactor to return an array of admin-only user emails. Refactor again to return an array of user objects that are admins.
+
+var administration = [
+    {
+        isAdmin: true,
+        email: "user1@email.com"
+    },
+    {
+        isAdmin: true,
+        email: "user2@email.com"
+    },
+    {
+        isAdmin: false,
+        email: "user3@email.com"
+    }
+]
+
+
+
+// function adminList(array){
+//     var adminsCount = 0
+//     for(var i = 0; i < administration.length; i++){
+//         if (administration[i].isAdmin === true) {
+//             adminsCount++;
+//         }
+//     } return adminsCount
+// }
+// console.log(adminList(administration));
+
+//1st Refactor
+// function adminList(array){
+//     var adminEmails = []
+//     for(var i = 0; i < administration.length; i++){
+//         if (administration[i].isAdmin === true) {
+//             adminEmails.push(array[i].email);
+//         }
+//     } return adminEmails
+// }
+// console.log(adminList(administration));
+
+// 2nd Refactor
+function adminList(array){
+    var filtered = array.filter(function(value) {
+        return value.isAdmin === true;
+    }); return filtered
+}
+console.log(adminList(administration));
