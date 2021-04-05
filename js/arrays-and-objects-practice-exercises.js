@@ -117,3 +117,47 @@ function adminList(array){
     }); return filtered
 }
 console.log(adminList(administration));
+
+// 5.)
+// Create a function, makeSandwhichObjects() that takes in two array of strings, breads and fillings and returns an array of sandwhichObjects that contain properties for bread and filling and values correspond to the same order of the two passed in arrays. Assume the two array inputs are the same length.
+
+var breads = [
+    "white",
+    "wheat",
+    "rhy",
+    "white"
+];
+var fillings = [
+    "pb&j",
+    "ham",
+    "cheese steak",
+    "tuna"
+];
+
+var breadsObject = breads.reduce(function(bread, a){
+    bread.push({bread: a})
+    return bread
+}, [])
+console.log(breadsObject)
+
+var fillingsObject = fillings.reduce(function(filling,a){
+    filling.push({filling: a})
+    return filling;
+}, [])
+ console.log(fillingsObject)
+
+
+var completedSandwhiches = []
+for (var i =0; i < breadsObject.length; i++) {
+    completedSandwhiches[i] = {bread: breadsObject[i].bread, filling: fillingsObject[i].filling}
+} console.log(completedSandwhiches)
+
+
+
+
+// function makeSandwhichObjects(array1, array2){
+//
+// }
+// console.log(makeSandwhichObjects(breads, fillings));
+
+
