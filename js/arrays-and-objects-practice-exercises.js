@@ -147,10 +147,10 @@ var fillingsObject = fillings.reduce(function(filling,a){
  console.log(fillingsObject)
 
 
-var completedSandwhiches = []
+var completedSandwiches = []
 for (var i =0; i < breadsObject.length; i++) {
-    completedSandwhiches[i] = {bread: breadsObject[i].bread, filling: fillingsObject[i].filling}
-} console.log(completedSandwhiches)
+    completedSandwiches[i] = {bread: breadsObject[i].bread, filling: fillingsObject[i].filling}
+} console.log(completedSandwiches)
 
 
 
