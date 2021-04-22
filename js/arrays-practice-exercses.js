@@ -56,7 +56,7 @@ console.log(twentySidedDie());
 
 // Make a function called twelveSidedDie() that returns a random integer between 1 and 12.
 function twelveSidedDie() {
-    return Math.floor(Math.random() * 20) + 1;
+    return Math.floor(Math.random() * 12) + 1;
 }
 console.log(twelveSidedDie());
 
@@ -76,19 +76,29 @@ console.log(rollDie());
 var numberOfRolls = []
 function listOfRolls (num) {
     for( var i = 0; i < num; i++) {
-        numberOfRolls.push(i);
+        numberOfRolls.push(rollDie());
     } return numberOfRolls
 }
 console.log(listOfRolls(3));
 
-function listOfRollsFromDieFunc(numberOfRolls, diceFunction) {
-    var diceValues = []
-    for (var i = 0; i < numberOfRolls; i++) {
-        diceValues.push(i);
-    } diceValues.forEach(function(number, index) {
-        diceValues[index] = twelveSidedDie();
-    }); return diceValues;
+// function listOfRollsFromDieFunc(numberOfRolls,diceFunction) {
+//     var rollsArray = []
+//     for(var i = 1; i<=numberOfRolls; i++) {
+//         var d = diceFunction;
+//         rollsArray.push(d)
+//     }
+//     return rollsArray;
+// }
+
+function listOfRollsFromDieFunc(numOfRolls, diceFunc){
+    var rollsArray = []
+    for(var i = 1; i <= numOfRolls; i++){
+        var d = diceFunc
+        rollsArray.push(d);
+    }
+    return rollsArray
 }
-console.log(listOfRollsFromDieFunc(4, twelveSidedDie()));
-console.log(listOfRollsFromDieFunc(5, twelveSidedDie()));
-console.log(listOfRollsFromDieFunc(3, twentySidedDie()));
+
+console.log(listOfRollsFromDieFunc(4, rollDie()));
+console.log(listOfRollsFromDieFunc(5, rollDie()));
+console.log(listOfRollsFromDieFunc(3, rollDie()));
