@@ -25,6 +25,23 @@
 // console.log(allIndexesOf("fruits", "guava"));
 // console.log(allIndexesOf("fruits", "pineapple"));
 
+// Define a function named removeAll(array, value) that takes in two arguments. The first argument should be an array and the second argument should be a value you wish to remove
+
+
+// removeAll(bugs, "ant") should return ["mosquito", "scorpion",   "mosquito", "typo", "reference error", "type error"]
+// var bugs = ["mosquito", "ant", "scorpion", "ant", "ant", "mosquito", "typo", "reference error", "type error"];
+//
+// function removeAll (array, value){
+//     for (var i =0; i < array.length; i++) {
+//         if(array[i] === value) {
+//             array.splice(i,1)
+//             i--;
+//         }
+//     } return bugs
+// }
+// console.log(removeAll(bugs,"ant"));
+// console.log(removeAll(bugs, "mosquito"));
+// console.log(removeAll(bugs, "roach"));
 
 // Make a function called randomIntBetween(min, max) that returns a random number between the min and the max.
 function randomInt(min, max){
@@ -215,4 +232,48 @@ console.log(getRandomQuote());
 // The second argument should be any given string
 // getIndexesOf() should return an array containing all of the indexes of that character in the string
 // Example: getIndexesOf("a", "banana") should return the array [1, 3, 5]
-// Example: getIndexesOf("z", "banana") should return an empty array [] since there are no "z" characters in "banana"
+// Example: getIndexesOf("z", "banana") should return an empty array [] since there are no "z" characters in "banana".
+function getIndexsOf (input1, input2) {
+    var str = input2
+    var newArray = []
+    for (i = 0; i < str.length; i++) {
+        if (str.includes(input1) === false) {
+            return newArray
+        }if (str[i] === input1) {
+            newArray.push(i);
+        }
+    } return newArray
+}
+console.log(getIndexsOf("a", "banana"));
+console.log(getIndexsOf("z", "banana"));
+
+// Exercise 9. Write a function named removeAll.
+// It should accept an array and a value
+// removeAll should return an array with all of the original contents EXCEPT for the provided value
+// iterate across the input array
+// output array
+// Example: removeAll([1, 2, 3], 2) should return [1, 3]
+// Example 2: removeAll([2, 2, 3, 4, 5, 2, 2], 2) should return [3, 4, 5]
+
+function removeAll(array, value){
+    for (var i =0; i < array.length; i++) {
+        if(array[i] === value) {
+            array.splice(i,1)
+            i--;
+        }
+    } return array;
+}
+// console.log(removeAll([1, 2, 3], 2));
+console.log(removeAll([2, 2, 3, 4, 5, 2, 2], 2));
+
+// Exercise 10. Write a function named firstTenFibonacciNumbers() that returns an array of the first ten fibonacci numbers
+function firstTenFibonacciNumbers(){
+    var fNumbers = []
+    fNumbers[0] = 0;
+    fNumbers[1] = 1;
+    for (var i = 2; i <= 10; i++) {
+        fNumbers[i] = fNumbers[i-2] + fNumbers[i - 1];
+        fNumbers.push[i];
+    } return fNumbers
+}
+console.log(firstTenFibonacciNumbers());
