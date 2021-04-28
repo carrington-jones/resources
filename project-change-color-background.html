@@ -23,11 +23,14 @@
     var colors = ["#ff0000", "#ffff00", "#0000ff", "#008000"];
     var random_color = colors[Math.floor(Math.random() * colors.length)];
     var body1 = document.getElementById("body")
+    var randcol =[]
+
+    button.addEventListener("click", colorChangeListener);
 
     var colorChangeListener = function (event) {
         body1.style.backgroundColor = random_color;
     }
-    button.addEventListener("click", colorChangeListener);
+
 
 
 </script>
