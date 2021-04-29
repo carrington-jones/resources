@@ -23,6 +23,22 @@ console.log(sumOfPositives([44, "15", -10, 1]));
 // sumOfPositives([0, 6, -9, 8, "six"]); // should return 14.
 // sumOfPositives([44, "15", -10, 1]); // should return 45.
 
+// Write a function named averageSales that accepts an array of objects where each object represents a person, and has a sales property. The function should return the average of every object's sales property.
+//
+// averageSales([
+//     {name: 'Jim Halpert', sales: 100},
+//     {name: 'Dwight Schrute', sales: 50},
+//     {name: 'Andy Bernard', sales: 150},
+// ])
+// 100
+function averagesSales(array) {
+    var totalSales =[]
+    array.forEach(function(salesPerson){
+        totalSales.push(salesPerson.sales);
+    })
+    return //average of total sales//
+}
+
 
 // Write a function called carCreator that accepts an array of 4 elements
 // and returns a car object with the following properties: make, model, year, and color.
