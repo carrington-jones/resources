@@ -167,3 +167,18 @@ function getAverageSalesPerEmployee() {
 }
 
 console.log(getAverageSalesPerEmployee());
+
+
+// Exercise 6. Practice with assignment by reference
+// create a variable named person1 with a name property. Assign it a name property.
+// Now create a variable named person2 and assign person1 to it.
+// Then reassign the name property on person2 with person2.name = "Bob";
+// console.log the name property on person 1.
+// Why do you think changing person2 altered person1?
+// The term for this behavior is assignment by reference.
+
+var obj ={}
+var person1 = obj.name
+var person2 = person1
+person2.name = "Bob"
+console.log(person1.name)

@@ -277,3 +277,20 @@ function firstTenFibonacciNumbers(){
     } return fNumbers
 }
 console.log(firstTenFibonacciNumbers());
+
+// Exercise 11. Write a function named getNFibonacci(n) that returns an array containing the first n fibonacci numbers
+function nFibonacciNumbers(n) {
+    var fNumbers2 = []
+    fNumbers2[0] = 0;
+    fNumbers2[1] = 1;
+    for (var i = 2; i <= n; i++) {
+        fNumbers2[i] = fNumbers2[i - 2] + fNumbers2[i - 1];
+        fNumbers2.push[i];
+    }
+    return fNumbers2
+}
+console.log(nFibonacciNumbers(21));
+
+// Exercise 12. Write a function named moveFirstToLast() that takes in an array
+// the function should return the array with the first element at the end
+// Example: moveFirstToLast([1, 2, 3, 4]) should return [2, 3, 4, 1]
