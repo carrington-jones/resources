@@ -5,18 +5,39 @@
     <title>JQuery-intro-lec</title>
 </head>
 <body>
-<h3> First topic</h3>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-<h3>Second Topic</h3>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-<h3>Third Topic</h3>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-</p>
+<!--<h3> First topic</h3>-->
+<!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>-->
+<!--<h3>Second Topic</h3>-->
+<!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>-->
+<!--<h3>Third Topic</h3>-->
+<!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.-->
+<!--</p>-->
+
+<h1> jQuery Selectors</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid asperiores, consectetur dignissimos laudantium magnam minima neque nobis pariatur placeat quaerat quas ratione soluta voluptas voluptate voluptatibus? Facere recusandae repellendus tenetur.</p>
+<h2 id="id-selectors">ID Selectors</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet atque consectetur eius excepturi impedit iure, iusto magnam mollitia necessitatibus non odio quae quas quibusdam, quidem, ratione similique tempore veritatis voluptatem.</p>
+<h2 class="class-selectors">Class Selectors</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi asperiores assumenda autem blanditiis culpa cum cupiditate dignissimos dolores eum explicabo fugit magnam minus molestiae, porro quae quibusdam quod reprehenderit voluptatibus!</p>
+<h2>Generic Element</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A amet autem commodi, deserunt dolorem id soluta? Asperiores aspernatur et, excepturi fugiat ipsa laboriosam libero nam odit officiis tempora tempore ullam.</p>
+
+
+
+
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<script src="js/jQuery-intro-lec.js">
-
+<script src="js/jQuery-intro-lec.js"></script>
+<script>
+    // we can use jQuery to call the jQuery function
+    // we can use html to access the content of an element
+    //we can select and element by its id
+    $("#id-selectors").html("I am the chosen one");
+    // we can use the $ shortcut to call the jQuery function
+    //we can alter the css that is applied to an element
+    $(".class-selectors").css("font-family", "sans-serif");
+    // we can access all elements of a particular type using the tag selector
+    $("p").html("You've been pwned");
 </script>
-
 </body>
 </html>
