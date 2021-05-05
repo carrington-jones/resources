@@ -25,7 +25,7 @@ function counterDecrease(){
     counter.innerHTML = count
 }
 
-$(document).on("keyup", function(e){
+$(document).on("keydown", function(e){
     if(e.which==80) {
         counterIncrease();
     }
@@ -34,4 +34,16 @@ $(document).on("keyup", function(e){
     }
 });
 
-// counter.innerHTML = count
+//3.When someone types 1, 2, 3 in a row, show an alert that says "You get a 50% discount!".
+var bucket = [];
+var secretcode = "495051";
+var input = ""
+$(document).keydown(function (e) {
+    var key = e.keyCode;
+    bucket.push(key);
+    var newString = bucket.join('');
+    console.log(newString)
+    if(newString === secretcode) {
+        alert("You get a 50% discount!")
+    }
+});

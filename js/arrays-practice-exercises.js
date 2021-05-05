@@ -217,7 +217,7 @@ console.log(sampleArray);
 //   getRandomQuote should generate a random number between 0 and the array's length minus 1
 //   use the randomly generated number as your index
 //   return a random quote.
-function getRandomQuote(input){
+function getRandomQuote(){
     var quotes = [
         "yes",
         "no",
@@ -236,7 +236,7 @@ console.log(getRandomQuote());
 function getIndexsOf (input1, input2) {
     var str = input2
     var newArray = []
-    for (i = 0; i < str.length; i++) {
+    for (var i = 0; i < str.length; i++) {
         if (str.includes(input1) === false) {
             return newArray
         }if (str[i] === input1) {
@@ -294,3 +294,48 @@ console.log(nFibonacciNumbers(21));
 // Exercise 12. Write a function named moveFirstToLast() that takes in an array
 // the function should return the array with the first element at the end
 // Example: moveFirstToLast([1, 2, 3, 4]) should return [2, 3, 4, 1]
+
+function moveFirstToLast(input) {
+    var element = input.shift();
+    input.push(element);
+    return input
+
+}
+console.log(moveFirstToLast([1, 2, 3, 4]))
+console.log(moveFirstToLast([10, 15, 84, 12]))
+
+// Exercise 13. Write a function named zip() that takes in two arrays with the same number of elements
+// Zip returns a new array of arrays where each element is an array of the two elements at the same index
+// Example: zip([1, 2, 3], [4, 5, 6]) returns [[1, 4], [2, 5], [3, 6])
+// Example: zip(["a", "b", "c"], ["x", "y", "z"]) returns [["a", "x"], ["b", "y"], ["c", "z"]]
+
+function zip(array1, array2) {
+    var newArray1 =[]
+    var element = array1.shift();
+    var element2 = array2.shift();
+    newArray1.push(element)
+    newArray1.push(element2)
+    var newArray2 =[]
+    var element3 = array1.shift();
+    var element4 = array2.shift();
+    newArray2.push(element3)
+    newArray2.push(element4)
+    var newArray3 =[]
+    var element5 = array1.shift();
+    var element6 = array2.shift();
+    newArray3.push(element5)
+    newArray3.push(element6)
+    var bigArray = []
+        bigArray.push(newArray1);
+        bigArray.push(newArray2);
+        bigArray.push(newArray3);
+        return bigArray;
+}
+console.log(zip([1, 2, 3], [4, 5, 6]))
+//Working on refactoring exercise 13 using a loop
+function zip2(array1, array2){
+    var newArray =[]
+    for(var i = 0; i < array2.length; i++){
+        array1.slice(i);
+    }
+}
