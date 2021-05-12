@@ -119,7 +119,7 @@ function adminList(array){
 console.log(adminList(administration));
 
 // 5.)
-// Create a function, makeSandwhichObjects() that takes in two array of strings, breads and fillings and returns an array of sandwhichObjects that contain properties for bread and filling and values correspond to the same order of the two passed in arrays. Assume the two array inputs are the same length.
+// Create a function, makeSandwichObjects() that takes in two array of strings, breads and fillings and returns an array of sandwhichObjects that contain properties for bread and filling and values correspond to the same order of the two passed in arrays. Assume the two array inputs are the same length.
 
 var breads = [
     "white",
@@ -155,10 +155,15 @@ for (var i =0; i < breadsObject.length; i++) {
 
 
 
-// function makeSandwhichObjects(array1, array2){
+// function makeSandwichObjects(array1, array2){
 //
 // }
-// console.log(makeSandwhichObjects(breads, fillings));
+// console.log(makeSandwichObjects(breads, fillings));
+
+
+
+
+
 
 //Remove all 9s from a given array
 function remove9s(input) {

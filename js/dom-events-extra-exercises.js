@@ -6,7 +6,7 @@ function bodyPurple() {
 
 }
 
-$("#body").on("keyup", function(e){
+$("#body").on("keydown", function(e){
     if(e.which==71) {
     bodyPurple();
     }
