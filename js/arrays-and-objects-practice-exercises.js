@@ -162,17 +162,3 @@ for (var i =0; i < breadsObject.length; i++) {
 
 
 
-
-
-
-//Remove all 9s from a given array
-function remove9s(input) {
-    for (var i = 0; i < input.length; i++) {
-        if(input[i] === 9) {
-            delete input[i];
-        }
-    } return input
-
-} console.log(remove9s([9, 9, 9, 10, 11]))
-
-

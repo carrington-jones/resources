@@ -93,7 +93,7 @@
 // </ul>`
 
 //====== for ...of loop =====
-for (let i =0; i < 4; i++) {
+for (let i = 0; i < 4; i++) {
     console.log(i);
 }
 
@@ -105,9 +105,10 @@ for (let i =0; i < 4; i++) {
 
 //====== ARROW FUNCTION ======
 
-function test(){
+function test() {
     return "Hello from the test function!"
 }
+
 console.log(test());
 //^^^Function syntax we have been using
 
@@ -123,3 +124,104 @@ const sayHello = (firstName, lastName) => {
 
 console.log(sayHello('Jay', 'Arrendondo'))
 
+let nationalParks = ['Grand Canyon National Park', 'Banff National Park', 'Joshua Tree National Park'];
+
+// ==== Default Function Parameter Values ====
+
+// ES5 Syntax
+
+// function add(num1, num2) {
+//     if(num1 === undefined) {
+//         num1 = 2;
+//     }
+//     if(num2 === undefined) {
+//         num2 = 2;
+//     }
+//     return num1+ num2;
+// }
+//
+// console.log(add());
+// console.log(add(5))
+// console.log(add(5,5))
+
+// ES6 (better) way
+
+// const add = (num1 = 2, num2 = 4) => {
+//     return num1 + num2;
+// }
+//
+// console.log(add());
+// console.log(add(5));
+// console.log(add(5,5));
+
+// ===== Object Property Variable Assignment (shorthand) =====
+
+// ES5 syntax
+
+// var name = 'Loopy Trail';
+// var distance = 4.6
+// var difficulty = 'moderate';
+// var isPaved = true
+
+// var trail = {
+//     name: name,
+//     distance: distance,
+//     difficulty: difficulty,
+//     isPaved: isPaved
+// }
+
+// console.log(trail);
+
+// ES6 (BETTER) Way
+
+let name = 'Loopy Trail';
+let distance = 4.6
+let difficulty = 'moderate';
+let isPaved = true
+
+let trail = {
+    name,
+    distance,
+    difficulty,
+    isPaved
+};
+console.log(trail);
+
+// ====== Object Destructuring ======
+
+// ES5 Way
+
+// let nameOfTrail = trail.name;
+// let distanceOfLoopTrail = trail.distance;
+//
+// console.log(nameOfTrail);
+// console.log(distanceOfLoopTrail);
+
+// ES6 Way
+
+let myObject = {
+    movieName: 'The Incredibles',
+    length: '1hr 43min'
+}
+
+let {movieName, length} = myObject;
+
+console.log(movieName, length);
+
+// ES5 function for object destructuring
+
+// function describeTrail(trailObj) {
+//     var name = trailObj.name;
+//     var distance = trailObj.distance;
+//
+//     return name + " " + "is " + distance + "mi long";
+// }
+
+// console.log(describeTrail(trail))
+
+let describeTrail = trailObj => {
+    var {name, distance} = trailObj;
+    return name + " " + "is " + distance + "mi long";
+
+}
+console.log(describeTrail(trail));
