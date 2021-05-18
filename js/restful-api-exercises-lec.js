@@ -74,8 +74,22 @@ let patchOptions = {
 }
 fetch("https://diagnostic-thirsty-ptarmigan.glitch.me/books/7", patchOptions).then(getBooks)
 
+//DELETE
 
-getBooks()
+let deleteOptions = {
+    method: 'DELETE',
+    Headers: {
+        'Content-Type': 'application/json',
+    }
+};
+
+fetch("https://diagnostic-thirsty-ptarmigan.glitch.me/books/6", deleteOptions).then(getBooks)
+
+//Delete Button Functionality
+$("#uniqueBooks").click(() => {
+    let inputVal = $('#id-to-delete').val();
+    fetch(`https://diagnostic-thirsty-ptarmigan.glitch.me/books/${inputVal}`, deleteOptions).then(getBooks)
+})
 
 
 //white_check_mark
