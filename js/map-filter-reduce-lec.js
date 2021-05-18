@@ -89,3 +89,17 @@ under10k.forEach(function(car){
     $("#output").html(output)
 })
 
+//======Reduce Method======
+//Which is the car with the highest mileages?
+let highestMileage = cars.reduce(function(accumulator, car, index, carsArray){
+    if (index === carsArray.length -1) {
+        accumulator.push(car.mileage);
+        accumulator.sort(function(a, b){return b-a});
+        return accumulator[0];
+    } else {
+        accumulator.push(car.mileage);
+        return accumulator;
+    }
+}, []);
+
+console.log("The highest mileage is " + highestMileage)
