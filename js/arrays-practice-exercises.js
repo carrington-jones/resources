@@ -339,3 +339,4 @@ function zip2(array1, array2){
         array1.slice(i);
     }
 }
+//git test
