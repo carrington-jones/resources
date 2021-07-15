@@ -17,3 +17,4 @@ function narcissisticNumber(number){
 
 }
 narcissisticNumber(153);
+
